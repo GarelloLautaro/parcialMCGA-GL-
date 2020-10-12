@@ -1,9 +1,8 @@
 import './style.css';
 import React from 'react';
-import User from '../User/index.js'
 import { Field, Form } from "react-final-form";
 
-const FormUser = () => {
+const FormUser = (props) => {
     return (
         <div className="ContainerForm">
             <Form onSubmit={() => {}}>
@@ -13,11 +12,11 @@ const FormUser = () => {
                             <div className="FormProps">
                                 <h1>Alumnos</h1>
                                 <label>Nombre: </label>
-                                <input defaultValue={User.Alumno[0].name} type="text"/>
+                                <input defaultValue={props.name} type="text"/>
                                 <label>Año: </label>
-                                <input defaultValue={User.Alumno[0].year} type="text"/>
-                                <button type="submit">Editar información</button>
-                                <button type="submit">Agregar contadores</button>
+                                <input defaultValue={props.year} type="text"/>
+                                <button class="btn" type="submit">Guardar información</button>
+                                <button class="btn" type="submit">Agregar contadores</button>
                             </div>
                         </form>
                     )
