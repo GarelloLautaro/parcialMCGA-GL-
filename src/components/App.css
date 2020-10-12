@@ -1,7 +1,13 @@
 .App {
+  display: flex;
+  justify-content: center;
   text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(pink, violet);
 }
 
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +42,4 @@
     transform: rotate(360deg);
   }
 }
+*/
