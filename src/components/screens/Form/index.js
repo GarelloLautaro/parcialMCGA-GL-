@@ -1,9 +1,11 @@
 import './style.css';
 import React from 'react';
 import { Field, Form } from "react-final-form";
+import { BrowserRouter, Link, Route } from 'react-router-dom';
 
 const FormUser = (props) => {
     return (
+        <BrowserRouter>
         <div className="ContainerForm">
             <Form onSubmit={() => {}}>
                 {
@@ -15,7 +17,9 @@ const FormUser = (props) => {
                                 <input defaultValue={props.name} type="text"/>
                                 <label>Año: </label>
                                 <input defaultValue={props.year} type="text"/>
-                                <button class="btn" type="submit">Guardar información</button>
+                                <Link className="link" to="/EditUser">
+                                    <button class="btn" type="submit">Guardar información</button>
+                                </Link>
                                 <button class="btn" type="submit">Agregar contadores</button>
                             </div>
                         </form>
@@ -23,6 +27,8 @@ const FormUser = (props) => {
                 }
             </Form>
         </div>
+        <Route exact path="/EditUser" component={Form}></Route>
+    </BrowserRouter>
     );
 };
 

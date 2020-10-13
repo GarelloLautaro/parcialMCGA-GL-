@@ -16,7 +16,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="Form">
+        <div className="Home">
           <Home 
             name={this.state.name}
             year={this.state.year}
